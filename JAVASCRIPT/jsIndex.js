@@ -23,7 +23,20 @@ function opacidade(){
     document.getElementById('Mudar3').style.opacity = 0;
     document.getElementById('Mudar4').style.opacity = 0;
     document.getElementById('Mudar5').style.opacity = 0;
-    setTimeout(mudarTexto, 2000);
+    setTimeout(mudarTexto, 1000);
 }
-
 function delay(){};
+
+
+//* API DE HORA CERTA
+function horacerta(){
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'c2a7288aa8msh7725963753b0639p1d7550jsn6cca2c4a636a',
+            'X-RapidAPI-Host': 'world-time-by-api-ninjas.p.rapidapi.com'
+        }
+    };
+    fetch('https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=S%C3%A3o%20Paulo', options)
+	.then(function(response){
+        response.json().then(function(data){console.log(data)})})};
