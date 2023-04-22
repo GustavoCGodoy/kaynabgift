@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 @font-face {
     font-family: StarJedi;
-    src: url(fontes/Starjhol.ttf);
+    src: url('fontes/Starjhol.ttf');
 }
 @font-face {
     font-family: StarOut;
-    src: url(fontes/Starjout.ttf);
+    src: url('fontes/Starjout.ttf');
 }
 body{
     margin: 0;
     padding: 0;
-    background: url('tatooine1.jpg');
+    background: url('/IMAGENS/tatooine1.jpg');
     background-size: 100%;
 }
 div{
