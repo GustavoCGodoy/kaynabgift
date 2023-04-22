@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 @font-face {
     font-family: StarJedi;
-    src: url('fontes/Starjhol.ttf');
+    src: url('../fontes/Starjhol.ttf');
 }
 @font-face {
     font-family: StarOut;
-    src: url('fontes/Starjout.ttf');
+    src: url('../fontes/Starjout.ttf');
 }
 body{
     margin: 0;
     padding: 0;
     background: url('/IMAGENS/tatooine1.jpg');
     background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 div{
     background-color: rgba(0,0,0,.6);
@@ -19,7 +23,7 @@ div{
 div#Maintitle h1{
     color: white;
     text-align: center;
-    font-family: StarOut;
+    font-family: 'StarOut';
     font-size: 40px;
     font-weight: lighter;
     padding: 0;
@@ -28,7 +32,7 @@ div#Maintitle h1{
 div#Maintitle h2{
     color: white;
     text-align: center;
-    font-family: StarJedi;
+    font-family: 'StarJedi';
     font-weight: lighter;
     font-size: 25px;
     padding: 0;
@@ -43,10 +47,9 @@ div#Textoinicial h3{
     line-height: 30px;
 }
 div#Textoinicial{
-    padding-left: 230px;
-    padding-right: 230px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-top: 40px;
-    background-position: bottom;
 }
 div#Textoinicial p{
     text-align: justify;
@@ -56,10 +59,14 @@ div#Textoinicial p{
     font-family: 'Titillium Web', sans-serif;
     line-height: 30px;
 }
+
 div#botao{
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
+    background-color: rgba(0,0,0,.6);
+    padding-bottom: 200px;
 }
+
 button#transformar{
     font-size: 25px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.8);
@@ -71,27 +78,23 @@ button#transformar{
     padding: 15px 32px;
     border-radius: 4px;
 }
+
 button#transformar:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.8), 0 17px 50px 0 rgba(0,0,0,1);
     background-color: green;
     cursor: pointer;
 }
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: white;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: green;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 75, 0);
-  }
+
+mark{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0,0,0,0);
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+footer{
+    background-color: rgba(0,0,0,.6);
+}
