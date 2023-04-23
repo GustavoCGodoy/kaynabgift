@@ -7,12 +7,14 @@ function mudarTexto(){
     document.getElementById('Mudar1').style.opacity = 1;
     document.getElementById('Mudar2').innerHTML='Mas, para aqueles que se aventuram além de conversas rasas e banais, há um mundo a ser descoberto.';
     document.getElementById('Mudar2').style.opacity = 1;
-    document.getElementById('Mudar3').innerHTML=' Embora seja uma pessoa complexa, Kayná tem uma beleza indescritível. Sua energia radiante brilha no céu, criando um cenário espetacular digno de um pôr do Sol. Ilumina como as estrelas da noite refletem nas dunas com uma luz mágica. E, acima de tudo, há a paz e a tranquilidade da sua calma, onde se pode encontrar um refúgio para a alma.';
+    document.getElementById('Mudar3').innerHTML=' Embora seja uma pessoa complexa, você tem uma beleza indescritível. Sua energia radiante brilha no céu, criando um cenário espetacular digno de um pôr do Sol. Ilumina como as estrelas da noite refletem nas dunas com uma luz mágica. E, acima de tudo, há a paz e a tranquilidade da sua calma, onde se pode encontrar um refúgio para a alma.';
     document.getElementById('Mudar3').style.opacity = 1;
-    document.getElementById('Mudar4').innerHTML='Para aqueles que podem chamar Kayná de próxima, é uma pessoa especial e única. É como aventura, descoberta e liberdade. E, embora possa ser difícil às vezes, a força e a determinação dela é inabalável.';
+    document.getElementById('Mudar4').innerHTML='Para aqueles que podem te considerar próxima, é uma pessoa especial e única. É como aventura, descoberta e liberdade. E, embora possa ser difícil às vezes, a força e a determinação dela é inabalável.';
     document.getElementById('Mudar4').style.opacity = 1;
-    document.getElementById('Mudar5').innerHTML='Você captura minha imaginação, e permanecerá viva na memória mesmo que um dia não nos falemos mais. Para quem a conhece, é mais do que uma simples amizade - é nosso lar, é nosso tesouro.';
+    document.getElementById('Mudar5').innerHTML='Você captura minha imaginação, e permanecerá viva na memória mesmo que um dia não nos falemos mais. Para mim, é a melhor coisa que aconteceu - é meu lar, é meu tesouro.';
     document.getElementById('Mudar5').style.opacity = 1;
+    document.documentElement.scrollTop = 1;
+    document.getElementById("body").style.overflow = "hidden";
 }
 function opacidade(){
     setTimeout(delay,1500);
@@ -24,11 +26,20 @@ function opacidade(){
     document.getElementById('Mudar3').style.opacity = 0;
     document.getElementById('Mudar4').style.opacity = 0;
     document.getElementById('Mudar5').style.opacity = 0;
+    document.getElementById("dwnpg").style.scale = '0%';
     setTimeout(mudarTexto, 1000);
 }
 function delay(){};
 function carregarpagdelay(){
     setTimeout(carregarpag, 2000);
+}
+function rolling(){
+    document.getElementById("dwnpg").style.opacity = 1;
+    document.getElementById("dwnpg").style.visibility = "visible";
+}
+function norolling(){
+    document.getElementById("dwnpg").style.opacity = 0;
+    document.getElementById("dwnpg").style.visibility = "hidden";
 }
 function carregarpag(){
     document.getElementById("imginicio").style.opacity = 0;
@@ -36,7 +47,25 @@ function carregarpag(){
     document.getElementById("txtlogo").style.opacity = 1;
     document.getElementById("transformar").style.opacity = 1;
     document.getElementById("Maintitle").style.opacity = 1;
+    document.getElementById("body").style.border = "3px solid green";
+    document.getElementById("body").style.overflow = "visible";
+    document.getElementById("dwnpg").style.opacity = 1;
 };
+
+
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  if (scrolled>20){
+    norolling();
+  }
+  else{
+    rolling();
+  }
+}
+
 
 //* API DE HORA CERTA
 function horacerta(){
@@ -49,4 +78,5 @@ function horacerta(){
     };
     fetch('https://world-time-by-api-ninjas.p.rapidapi.com/v1/worldtime?city=S%C3%A3o%20Paulo', options)
 	.then(function(response){
-        response.json().then(function(data){console.log(data)})})};
+        response.json().then(function(data){console.log(data)})})
+}
