@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@font-face {
+    font-family: StarJedi;
+    src: url('../fontes/Starjhol.ttf');
+}
+@font-face {
+    font-family: StarOut;
+    src: url('../fontes/Starjout.ttf');
+}
+
+body{
+    background-color: rgb(68, 68, 68);
+}
+
+div#containers {
+    text-align: center;
+    display: block;
+}
+div#tatooinetxt{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 400px;
+    left: 150px;
+    font-family: StarOut;
+    font-size: 50px;
+    transition: all 1s ease-in-out;
+
+}
+img#tatooine{
+    width: 250px;
+    display: block;
+    position: relative;
+    top: 250px;
+    left: 150px;
+    transition: all 1s ease-in-out;
+}

@@ -2,6 +2,7 @@
 function mudarTexto(){
     document.getElementById('tirar').innerHTML='';
     document.getElementById('tirar1').innerHTML='';
+    document.getElementById('botao').style.padding = '80px';
     document.getElementById('Mudar1').innerHTML='Meu lugar favorito é você, um lugar repleto de mistérios e segredos.';
     document.getElementById('Mudar1').style.opacity = 1;
     document.getElementById('Mudar2').innerHTML='Mas, para aqueles que se aventuram além de conversas rasas e banais, há um mundo a ser descoberto.';
@@ -26,7 +27,16 @@ function opacidade(){
     setTimeout(mudarTexto, 1000);
 }
 function delay(){};
-
+function carregarpagdelay(){
+    setTimeout(carregarpag, 2000);
+}
+function carregarpag(){
+    document.getElementById("imginicio").style.opacity = 0;
+    document.getElementById("imginicio").style.visibility = "hidden";
+    document.getElementById("txtlogo").style.opacity = 1;
+    document.getElementById("transformar").style.opacity = 1;
+    document.getElementById("Maintitle").style.opacity = 1;
+};
 
 //* API DE HORA CERTA
 function horacerta(){
